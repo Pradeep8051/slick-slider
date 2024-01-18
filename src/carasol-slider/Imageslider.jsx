@@ -20,9 +20,10 @@ function Imageslider() {
     setCurrentimageIndex(!currentimageIndex ? data.length - 1 : currentimageIndex - 1)
   }
   useEffect(() => {
-    setTimeout(() => {
+    const timer=setTimeout(() => {
       handleNextImage();
     }, 4000)
+    clearTimeout(timer)
   }, [currentimageIndex])
   return (
     <div className='flex justify-center'>
